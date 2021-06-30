@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksdynatracedemo-ad9f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksdynatracedemo-ad9f"
+  template:
+    metadata:
+      labels:
+        app: "aksdynatracedemo-ad9f"
+    spec:
+      containers:
+        - name: "aksdynatracedemo-ad9f"
+          image: "dyaks1234565667.azurecr.io/aksdynatracedemo"
+          ports:
+          - containerPort: 80
